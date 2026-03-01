@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter_Tight } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const interTight = Inter_Tight({
   subsets: ["latin"],
@@ -79,6 +80,7 @@ export default function RootLayout({
         {children}
         <GoogleAnalytics gaId="G-BQGKXTSLZX" />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
