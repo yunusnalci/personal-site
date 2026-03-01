@@ -1,8 +1,12 @@
-export default function sitemap() {
+import type { MetadataRoute } from 'next'
+
+export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: "https://yunusnalci.com",
+      url: 'https://yunusnalci.com',
       lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 1,
     },
-  ];
+  ]
 }
