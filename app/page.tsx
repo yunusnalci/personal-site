@@ -155,30 +155,21 @@ export default function Home() {
         <div className="w-full">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-[520px_minmax(0,1fr)] lg:gap-24">
             <section className="space-y-10 lg:sticky lg:top-16 lg:self-start">
-              <div className="space-y-4">
-                <Image
-                  src="/assets/avatar.png"
-                  alt="Yunus Nalci avatar"
-                  width={56}
-                  height={56}
-                  className="h-14 w-14 rounded-xl border border-white/10 bg-white/5 object-cover"
-                  priority
-                />
+                      <div className="space-y-6">
+  <div className="space-y-2">
+    <h1 className="text-4xl font-semibold tracking-tight">
+      Yunus Nalcı
+    </h1>
+    <p className="text-lg text-white/60">
+      Brand &amp; Product Designer
+    </p>
+  </div>
 
-                <div className="space-y-2">
-                  <h1 className="text-4xl font-semibold tracking-tight">
-                    Yunus Nalcı
-                  </h1>
-                  <p className="text-lg text-white/60">
-                    Brand &amp; Product Designer
-                  </p>
-                </div>
-
-                <p className="max-w-md text-white/90">
-                  Designing brand and product experiences <br />
-                  from strategy to execution.
-                </p>
-              </div>
+  <p className="max-w-md text-white/90">
+    Designing brand and product experiences <br />
+    from strategy to execution.
+  </p>
+</div>
 
               <div className="space-y-3">
                 <p className="text-xs tracking-widest text-white/40">
