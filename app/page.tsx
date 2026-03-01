@@ -291,7 +291,7 @@ export default function Home() {
                   <article
                     key={job.title + job.company}
                     className={[
-                      "group relative rounded-2xl border border-white/10 bg-black/50 p-5 transition",
+                       "group relative rounded-2xl border border-white/10 bg-black/50 p-4 sm:p-5 transition",
                       "hover:border-white/20 hover:bg-white/10",
                       index === 0
                         ? "lg:bg-[radial-gradient(circle_at_85%_10%,rgba(255,255,255,0.10),transparent_55%)] lg:shadow-[0_0_70px_-35px_rgba(255,255,255,0.25)]"
@@ -299,20 +299,18 @@ export default function Home() {
                     ].join(" ")}
                   >
                     <div className="flex items-start justify-between gap-6">
-                      <div className="flex min-w-0 items-start gap-4">
-                        <div className="h-12 w-12 shrink-0 overflow-hidden rounded-xl border border-white/10 bg-black transition-colors group-hover:border-white/20 group-hover:bg-white/10">
-                          <img
-                            src={`/assets/${job.logo}`}
-                            alt={`${job.company} logo`}
-                            className={`h-full w-full object-contain p-2 ${
-                              job.logoScale ?? ""
-                            }`}
-                            draggable={false}
-                          />
-                        </div>
+                      <div className="flex min-w-0 items-start gap-3 sm:gap-4">
+  <div className="h-10 w-10 sm:h-12 sm:w-12 shrink-0 overflow-hidden rounded-xl border border-white/10 bg-black transition-colors group-hover:border-white/20 group-hover:bg-white/10">
+    <img
+      src={`/assets/${job.logo}`}
+      alt={`${job.company} logo`}
+      className={`h-full w-full object-contain p-1.5 sm:p-2 ${job.logoScale ?? ""}`}
+      draggable={false}
+    />
+  </div>
 
                         <div className="min-w-0">
-                          <h3 className="text-lg font-semibold leading-snug text-white">
+                          <h3 className="text-base sm:text-lg font-semibold leading-snug text-white">
                             <span className="block truncate">{job.title}</span>
                           </h3>
 
@@ -351,9 +349,9 @@ export default function Home() {
                       </div>
                     </div>
 
-                    <p className="mt-4 pl-16 text-sm leading-relaxed text-white/55 [display:-webkit-box] [-webkit-line-clamp:2] [-webkit-box-orient:vertical] overflow-hidden">
-                      {job.desc}
-                    </p>
+                   <p className="mt-4 pl-[52px] sm:pl-16 text-sm leading-relaxed text-white/55 [display:-webkit-box] [-webkit-line-clamp:6] [-webkit-box-orient:vertical] overflow-hidden">
+  {job.desc}
+</p>
                   </article>
                 ))}
               </div>
